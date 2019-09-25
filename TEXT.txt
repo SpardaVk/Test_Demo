@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 TEsst
 
 Увася
 
 
 hello world 
-=======
-TEsst
->>>>>>> parent of 975be9e... Update TEXT.txt
-123123123123123123
