@@ -38,8 +38,6 @@ public class HelloWorldSeleniumHQTest {
         Assert.assertTrue(TestResult, "Результат поиска не найден");
 
     }
-
-
     @Test(description = "Тест от Epam system. #1 РЕШЕНИЕ ВАРИАНТ 1 ")
     public void NewTestEpam() throws InterruptedException {
 
@@ -60,6 +58,7 @@ public class HelloWorldSeleniumHQTest {
        @Test(description = "Тест от Epam system. #2 Решение ВАРИАНТ 2")
 
        public void NewTest () throws InterruptedException  {
+
            boolean NewTestResult =new TasteTwoPage(driver)
                    .openPage()
                    .FieldPaste()
@@ -74,7 +73,6 @@ public class HelloWorldSeleniumHQTest {
                            "git reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\n" +
                            "git push origin master --force"));
        }
-
     // Метод вызываемый после исполнения кода выше (результат исполнения не имеет значения )
     @AfterMethod (alwaysRun = true)
     public void browserQuit (){

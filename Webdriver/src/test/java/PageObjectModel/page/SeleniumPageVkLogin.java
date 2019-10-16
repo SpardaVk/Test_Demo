@@ -34,6 +34,7 @@ public class SeleniumPageVkLogin  {
 
   // Метод который вызывает библиотеку driver(selenium) и передает url для перехода
     public SeleniumPageVkLogin openVklogin (){
+
         driver.get(HOME_PAGE);
 
         return this;
@@ -41,7 +42,6 @@ public class SeleniumPageVkLogin  {
 
     //заполнение полей на странице
     public SeleniumPageVkLogin SendKeyData (){
-
 
         NumberField.sendKeys("+375259696059");
         PasswordField.sendKeys("jshih7712");
@@ -53,7 +53,6 @@ public class SeleniumPageVkLogin  {
 
         NextButton.click();
 //вернет нам страницу home(позволяет вызывать методы со страницы home)
-
         return  new SeleniumPageVkHome(driver);
     }
 }

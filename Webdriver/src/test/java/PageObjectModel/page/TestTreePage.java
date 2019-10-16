@@ -36,19 +36,25 @@ public class TestTreePage extends Throwable {
     }
 
     public TestTreePage ClikToSearch() throws InterruptedException {
+
         FieldSearch.click();
         FieldSearch.clear();
         FieldSearch.sendKeys("Google Cloud Platform Pricing Calculator");
+
         return this;
     }
 
     public TestTreePage ClickToALLRESULTButton() {
+
         ResultButton.click();
+
         return this;
     }
 
     public GoogleCalculator ClickToFirstSearchResult() throws InterruptedException {
+
         SearchResult.click();
+
         return new GoogleCalculator(driver);
     }
 

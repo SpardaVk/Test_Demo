@@ -21,9 +21,9 @@ public class TestTree {
 
     }
 
-
     @Test(description = "Тест от Epam system. #3 Решение ВАРИАНТ 1")
     public void TestTree () throws InterruptedException {
+
         new TestTreePage(driver)
                 .openPage()
                 .ClikToSearch()

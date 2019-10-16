@@ -49,31 +49,37 @@ public class TasteTwoPage {
      }
 
     public TasteTwoPage FieldPaste () throws InterruptedException {
+
         FieldPaste.click();
         FieldPaste.clear();
         FieldPaste.sendKeys(Code);
        // FieldPaste.getText();
 
-
         return this;
     }
 
      public TasteTwoPage FieldSyntaxHighlighting () throws InterruptedException {
+
          FieldSyntax.click();
          FieldSyntaxBash.click();
+
          return  this;
      }
 
      public TasteTwoPage FieldPasteExpiration () throws InterruptedException {
+
          FieldExpiration.click();
          FieldExpirationTime.click();
+
          return this;
      }
 
      public TasteTwoPage FieldName (){
+
          FieldName.click();
          FieldName.clear();
          FieldName.sendKeys( "how to gain dominance among developers");
+
          return this;
      }
 

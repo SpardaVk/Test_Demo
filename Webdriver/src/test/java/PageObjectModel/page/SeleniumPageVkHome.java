@@ -24,8 +24,9 @@ public class SeleniumPageVkHome   {
 
 //Проверка на наличие элемената - строка "Сообшения"
     public boolean PageVkHomeOpen (){
-        new WebDriverWait( driver, 10)
-                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//span[.='Сообщения']")));
+
+        new WebDriverWait( driver, 10).until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//span[.='Сообщения']")));
+
         //Сравнение на наличие элемента > 0 , вернет true или false
         return driver.findElements(By.xpath("//span[.='Сообщения']")).size() > 0;
     }

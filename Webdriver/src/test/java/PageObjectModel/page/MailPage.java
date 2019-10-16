@@ -29,15 +29,6 @@ public class MailPage {
         return this;
     }
 
-
-    public WebDriver getDriver() {
-        return driver;
-    }
-
-    public void setDriver(WebDriver driver) {
-        this.driver = driver;
-    }
-
     public String SaveEmail(){
 
         String mailAddress = driver.findElement(By.xpath("//input[@id='mailAddress']")).getAttribute("value");
@@ -46,11 +37,14 @@ public class MailPage {
 
         return mailAddress;
     }
+
     public MailPage SwitchToMailPage(){
+
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         return this;
     }
+
      public MailPage OpenCharacter () throws InterruptedException {
 
          JavascriptExecutor jsx = (JavascriptExecutor)driver;
@@ -63,5 +57,4 @@ public class MailPage {
 
         return this;
      }
-
 }

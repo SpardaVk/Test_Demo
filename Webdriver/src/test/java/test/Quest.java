@@ -20,7 +20,7 @@ public class Quest {
 
     @FindBy(id = "select2-paste_expire_date-06-result-yqey-10M")
     protected   WebElement TimeTenMin;
-
+    String URL= "https://pastebin.com";
 
 
     @BeforeMethod(alwaysRun = true)
@@ -31,17 +31,13 @@ public class Quest {
     }
 
     public void NewTest(){
-        driver.get("https://pastebin.com");
+
+        driver.get(URL);
         FieldText.sendKeys("Hello from WebDriver");
         FieldSyntax.click();
         TimeTenMin.click();
 
-
-
     }
-
-
-
 
     @AfterMethod (alwaysRun = true)
     public void browserQuit () {

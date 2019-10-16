@@ -35,12 +35,10 @@ public class GoogleCalculator {
 
     public GoogleCalculator FieldMachineFamily () throws InterruptedException {
 
-
         WebElement iframe = driver.findElement(By.cssSelector("[src*='https://cloudpricingcalculator.appspot.com']"));
 
+        new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(driver.switchTo().frame(iframe).findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.instance']"))));
 
-        new WebDriverWait(driver,10)
-                .until(ExpectedConditions.elementToBeClickable(driver.switchTo().frame(iframe).findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.instance']"))));
         driver.switchTo().defaultContent();
         driver.switchTo().frame(iframe).findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.instance']")).click();
         Thread.sleep(1000);
@@ -62,7 +60,6 @@ public class GoogleCalculator {
     public GoogleCalculator FieldNumberOfGPUs () throws InterruptedException {
 
         WebElement iframe = driver.findElement(By.cssSelector("[src*='https://cloudpricingcalculator.appspot.com']"));
-
 
         driver.switchTo().frame(iframe).findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.gpuCount']")).click();
         Thread.sleep(2000);
@@ -135,9 +132,9 @@ public class GoogleCalculator {
 
         WebElement iframe = driver.findElement(By.cssSelector("[src*='https://cloudpricingcalculator.appspot.com']"));
 
-        new WebDriverWait(driver,10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.switchTo().frame(iframe).findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.quantity']"))));
+        new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(driver.switchTo().frame(iframe).findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.quantity']"))));
         driver.switchTo().defaultContent();
-        driver.findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.quantity']")).sendKeys("4");
+        driver.switchTo().frame(iframe).findElement(By.cssSelector("[ng-model='listingCtrl.computeServer.quantity']")).sendKeys("4");
         driver.switchTo().defaultContent();
 
         return this;
@@ -154,6 +151,7 @@ public class GoogleCalculator {
     }
 
     public GoogleCalculator FieldEmail (String email) throws InterruptedException {
+
         WebElement iframe = driver.findElement(By.cssSelector("[src*='https://cloudpricingcalculator.appspot.com']"));
 
         Thread.sleep(2000);
