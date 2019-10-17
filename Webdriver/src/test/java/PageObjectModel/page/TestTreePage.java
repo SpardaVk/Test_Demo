@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestTreePage extends Throwable {
 
@@ -35,7 +36,7 @@ public class TestTreePage extends Throwable {
         return this;
     }
 
-    public TestTreePage ClikToSearch() throws InterruptedException {
+    public TestTreePage ClickToSearch() throws InterruptedException {
 
         FieldSearch.click();
         FieldSearch.clear();

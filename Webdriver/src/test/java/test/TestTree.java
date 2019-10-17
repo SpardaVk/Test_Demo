@@ -26,7 +26,7 @@ public class TestTree {
 
         new TestTreePage(driver)
                 .openPage()
-                .ClikToSearch()
+                .ClickToSearch()
                 .ClickToALLRESULTButton()
                 .ClickToFirstSearchResult()
                 .FieldNumberInstances()
